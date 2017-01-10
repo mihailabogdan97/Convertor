@@ -6,21 +6,21 @@ void convertor_masa()
     char c;
     cout<<"---Convertor masa---";
     cout<<endl;
-    cout<<"Da-ti masa in kilograme: ";
+    cout<<"Dati masa in kilograme: ";
     cin>>m;
-    cout<<"Alege-ti 1 pentru a convertii masa in miligrame;";
+    cout<<"Alegeti 1 pentru a convertii masa in miligrame;";
     cout<<endl;
-    cout<<"Alege-ti 2 pentru a convertii masa in centigrame;";
+    cout<<"Alegeti 2 pentru a convertii masa in centigrame;";
     cout<<endl;
-    cout<<"Alege-ti 3 pentru a convertii masa in decigrame;";
+    cout<<"Alegeti 3 pentru a convertii masa in decigrame;";
     cout<<endl;
-    cout<<"Alege-ti 4 pentru a convertii masa in grame;";
+    cout<<"Alegeti 4 pentru a convertii masa in grame;";
     cout<<endl;
-    cout<<"Alege-ti 5 pentru a convertii masa in decagrame;";
+    cout<<"Alegeti 5 pentru a convertii masa in decagrame;";
     cout<<endl;
-    cout<<"Alege-ti 6 pentru a convertii masa in hectograme;";
+    cout<<"Alegeti 6 pentru a convertii masa in hectograme;";
     cout<<endl;
-    cout<<"Alege-ti 7 pentru a convertii masa in tone;";
+    cout<<"Alegeti 7 pentru a convertii masa in tone;";
     cout<<endl;
     cin>>c;
     switch(c)
@@ -77,11 +77,11 @@ void convertor_timp()
     cout<<"---Convertor timp---"<<endl;
     long t;
     char x;
-    cout<<"Da-ti timpul in ore: ";
+    cout<<"Dati timpul in ore: ";
     cin>>t;
-    cout<<"Alege-ti 1 pentru a convertii timpul in minute;";
+    cout<<"Alegeti 1 pentru a convertii timpul in minute;";
     cout<<endl;
-    cout<<"Alege-ti 2 pentru a convertii timpul in secunde;";
+    cout<<"Alegeti 2 pentru a convertii timpul in secunde;";
     cout<<endl;
     cin>>x;
     switch(x)
@@ -107,19 +107,19 @@ void convertor_lungime()
     float l;
     char k;
     cout<<"---Convertor lungime---"<<endl;
-    cout<<"Da-ti lungimea in metrii: "<<endl;
+    cout<<"Dati lungimea in metrii: "<<endl;
     cin>>l;
-    cout<<"Alege-ti 1 pentru convertirea lungimii in milimetrii;";
+    cout<<"Alegeti 1 pentru convertirea lungimii in milimetrii;";
     cout<<endl;
-    cout<<"Alege-ti 2 pentru convertirea lungimii in centimetrii;";
+    cout<<"Alegeti 2 pentru convertirea lungimii in centimetrii;";
     cout<<endl;
-    cout<<"Alege-ti 3 pentru convertirea lungimii in decimetrii;";
+    cout<<"Alegeti 3 pentru convertirea lungimii in decimetrii;";
     cout<<endl;
-    cout<<"Alege-ti 4 pentru convertirea lungimii in decametrii;";
+    cout<<"Alegeti 4 pentru convertirea lungimii in decametrii;";
     cout<<endl;
-    cout<<"Alege-ti 5 pentru convertirea lungimii in hectometrii;";
+    cout<<"Alegeti 5 pentru convertirea lungimii in hectometrii;";
     cout<<endl;
-    cout<<"Alege-ti 6 pentru convertirea lungimii in kilometrii;";
+    cout<<"Alegeti 6 pentru convertirea lungimii in kilometrii;";
     cout<<endl;
     cin>>k;
     switch(k)
@@ -170,9 +170,9 @@ void convertor_viteza()
     cout<<"---Convertor viteza---"<<endl;
     cout<<"Dati viteza in km/h;"<<endl;
     cin>>l;
-    cout<<"Alege-ti 1 pentru mph;";
+    cout<<"Alegeti 1 pentru mph;";
     cout<<endl;
-    cout<<"Alege-ti 2 pentru m/s;";
+    cout<<"Alegeti 2 pentru m/s;";
     cout<<endl;
     cin>>a;
     switch(a)
@@ -212,86 +212,175 @@ void convertor_arie()
     case '1':
     {l=l/1000000;
     cout<<"Aria in decametri patrati este "<<l;}
+    break;
     case '2':
     {l=l/10000;
     cout<<"Aria in hectometri patrati este "<<l;}
+       break;
     case '3':
     {l=l/100;
     cout<<"Aria in kilometri patrati este "<<l;}
+       break;
     case '4':
     {l=l*100;
     cout<<"Aria in decimetri patrati este "<<l;}
+       break;
     case '5':
     {l=l*10000;
     cout<<"Aria in centimetri patrati este "<<l;}
+       break;
     case '6':
     {l=l*1000000;
     cout<<"Aria in milimetri patrati este "<<l;}
+       break;
+    }
+
+}
+void convertor_temperatura()
+{
+    cin.get();
+    float l;
+    char a;
+    cout<<"---Convertor temperatura---"<<endl;
+    cout<<"Dati temperatura in grade Celsius"<<endl;
+    cin>>l;
+    cout<<"Alegeti 1 pentru grade Fahrenheit"<<endl;
+    cout<<"Alegeti 2 pentru grade Kelvin"<<endl;
+    cin>>a;
+    switch(a)
+    {
+    case '1':
+    {l=l*1.8+32;
+    cout<<"Temperatura in grade Fahrenheit este "<<l;}
+       break;
+    case '2':
+    {l=l+273,15;
+    cout<<"Temperatura in grade Kelvin este "<<l;}
+       break;
+    }
+
+}
+void convertor_energie()
+{
+    cin.get();
+    float l;
+    char a;
+    cout<<"---Convertor energie---"<<endl;
+    cout<<"Dati temperatura in grade Celsius"<<endl;
+    cin>>l;
+}
+void convertor_presiune()
+{
+
+}
+void convertor_volum()
+{
+
+}
+void convertor_densitate()
+{
+
+}
+void convertor_consum()
+{
+    cin.get();
+    float l;
+    char a;
+    cout<<"---Convertor consum combustibil---"<<endl;
+    cout<<"Alegeti 1 pentru convertor din l/100km in galoane la 100 mile"<<endl;
+    cout<<"Alegeti 2 pentru convertor din galoane la 100 mile in l/100km"<<endl;
+    cin>>a;
+    switch(a)
+    {
+    case '1':
+    {cout<<"Dati consumul dumneavoastra in l/100km"<<endl;
+    cin>>l;
+    l=l*0.4251;
+    cout<<"Consumul dumneavoastra in galoane la 100 mile este "<<l;}
+    break;
+    case '2':
+    {cout<<"Dati consumul dumneavoastra in galoane la 100 mile"<<endl;
+    cin>>l;
+    l=l*2.352;
+    cout<<"Consumul dumneavoastra in l/100km este "<<l;}
+    break;
     }
 
 }
 int main()
 {
-    char a;
-    cout<<"Alege'ti 1 pentru convertor lungime"<<endl;
-    cout<<"Alege'ti 2 pentru convertor arie"<<endl;
-    cout<<"Alege'ti 3 pentru convertor volum"<<endl;
-    cout<<"Alege'ti 4 pentru convertor timp"<<endl;
-    cout<<"Alege'ti 5 pentru convertor viteza"<<endl;
-    cout<<"Alege'ti 6 pentru convertor temperatura"<<endl;
-    cout<<"Alege'ti 7 pentru convertor masa"<<endl;
-    cout<<"Alege'ti 8 pentru convertor energie"<<endl;
-    cout<<"Alege'ti 9 pentru convertor presiune"<<endl;
-    cout<<"Alege'ti 10 pentru convertor densitate"<<endl;
-    cout<<"Alege'ti 11 pentru convertor consum combustibil"<<endl;
+
+    int a;
+    cout<<"Alegeti 1 pentru convertor lungime"<<endl;
+    cout<<"Alegeti 2 pentru convertor arie"<<endl;
+    cout<<"Alegeti 3 pentru convertor volum"<<endl;
+    cout<<"Alegeti 4 pentru convertor timp"<<endl;
+    cout<<"Alegeti 5 pentru convertor viteza"<<endl;
+    cout<<"Alegeti 6 pentru convertor temperatura"<<endl;
+    cout<<"Alegeti 7 pentru convertor masa"<<endl;
+    cout<<"Alegeti 8 pentru convertor energie"<<endl;
+    cout<<"Alegeti 9 pentru convertor presiune"<<endl;
+    cout<<"Alegeti 10 pentru convertor densitate"<<endl;
+    cout<<"Alegeti 11 pentru convertor consum combustibil"<<endl;
     cin>>a;
     switch(a)
     {
-    case '1':
+    case 1:
     {
         convertor_lungime();
     }
-    case '2':
+       break;
+    case 2:
     {
         convertor_arie();
     }
-    case '3':
+       break;
+    case 3:
     {
         convertor_volum();
     }
-    case '4':
+       break;
+    case 4:
     {
 
         convertor_timp();
     }
-    case '5':
+       break;
+    case 5:
     {
         convertor_viteza();
     }
-    case '6':
+       break;
+    case 6:
     {
         convertor_temperatura();
     }
-    case '7':
+       break;
+    case 7:
     {
         convertor_masa();
     }
-    case '8':
+       break;
+    case 8:
     {
         convertor_energie();
     }
-    case '9':
+       break;
+    case 9:
     {
         convertor_presiune();
     }
-    case '10':
+       break;
+    case 10:
     {
         convertor_densitate();
     }
-    case '11':
+       break;
+    case 11:
     {
         convertor_consum();
     }
+       break;
 
     }
 
